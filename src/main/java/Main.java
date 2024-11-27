@@ -2,7 +2,6 @@ import allclasses.irinabig.Animal;
 import allclasses.irinabig.Cat;
 import allclasses.irinabig.Feline;
 import allclasses.irinabig.Lion;
-import allclasses.petrov.Programmer;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,10 +13,9 @@ public class Main {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        showClassesPetrov();
 
     }
-    public static void showClassesIrinaBig() throws Exception {
+    public  static void showClassesIrinaBig() throws Exception {
         Feline feline = new Feline();
         System.out.println("Создан объект семейства " + feline.getFamily());
         Animal animal = new Animal();
@@ -29,13 +27,7 @@ public class Main {
         System.out.println("Кошка питается => " + cat.getFood().toString());
         System.out.println("Лев питается => " + lion.getFood().toString());
         System.out.println("Кошачьи питаются => " + feline.getFood("Хищник") .toString());
-    }
 
-    public  static void showClassesPetrov() {
-        Programmer programmer = new Programmer("Артем", 18);
-        programmer.writeCode();
-        programmer.drinkCoffee();
-        programmer.debugCode();
-    }
 
+    }
 }
