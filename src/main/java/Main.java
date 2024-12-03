@@ -103,6 +103,4 @@ public class Main {
         customMouse.setBirthDate(LocalDate.now().plusDays(1));
         System.out.println("Дата рождения после проверки: " + customMouse.getBirthDate());
     }
-
-
 }
