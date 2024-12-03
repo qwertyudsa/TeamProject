@@ -36,14 +36,6 @@ public class MouseTest {
     }
 
     @Test
-    public void testAgeCalculate() {
-        LocalDate birthDate = LocalDate.of(2024, 1, 1);
-        Mouse mouse = new Mouse("серая", "домовая", 20.0, birthDate);
-        long expectedAge = LocalDate.now().toEpochDay() - birthDate.toEpochDay();
-        assertEquals(expectedAge, mouse.getAgeInDays());
-    }
-
-    @Test
     public void testSetFalseBirthDate() {
         Mouse mouse = new Mouse();
         LocalDate futureDate = LocalDate.now().plusDays(1);

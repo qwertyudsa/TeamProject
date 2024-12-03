@@ -1,7 +1,6 @@
 package allclasses.chernyshova;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 public class Mouse {
     private String color;         // Цвет мыши
@@ -66,18 +65,12 @@ public class Mouse {
         }
     }
 
-    // Метод для расчета возраста мыши в днях
-    public long getAgeInDays() {
-        return ChronoUnit.DAYS.between(birthDate, LocalDate.now());
-    }
-
     // Метод для вывода информации о мыши
     public void describeMouse() {
         System.out.println("Вид мыши: " + species);
         System.out.println("Цвет: " + color);
         System.out.println("Вес: " + weight + " грамм");
         System.out.println("Дата рождения: " + birthDate);
-        System.out.println("Возраст в днях: " + getAgeInDays());
     }
 
     public static void main(String[] args) {
