@@ -4,6 +4,7 @@ import allclasses.smirnova.Seal;
 import allclasses.stebunov.Wolf;
 import allclasses.strelnikov.Capybara;
 import allclasses.fokin.FokinClass;
+import allclasses.urzhumova.Whale;
 import allclasses.yakimovich.YakimovichClass;
 import allclasses.antonov.Bear;
 import allclasses.yakovleva.*;
@@ -36,8 +37,10 @@ public class Main {
         showClassesStrelnikov();
         showClassesSmirnova();
         showClassesZolina();
-
+        showClassesUrzhumova();
     }
+
+
 
     public static void showClassesIrinaBig() throws Exception {
         System.out.println("\nДемонстрация работы классов Ирины Георгиевны:");
@@ -237,5 +240,12 @@ public class Main {
 
         boa.printCharacteristics(); // Вывод характеристик змеи
         boa.hiss();
+    }
+    private static void showClassesUrzhumova() {
+        System.out.println("\nДемонстрация работы классов Уржумовой Яны:\n");
+        Whale whale = new Whale();
+        System.out.println(whale.getSound());
+        Whale whaleToCompare = new Whale();
+        System.out.println(Whale.compare(whale,whaleToCompare));
     }
 }
