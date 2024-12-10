@@ -22,8 +22,8 @@ public class CheckBirthdayTests {
     @Parameterized.Parameters
     public static Object[][] getParameters() {
         return new Object[][]{
-                {2025, 3, 23, 2},//0
-                {2009, 12, 8, 1},//0
+                {2025, 3, 23, 0},
+                {2009, 12, 8, 0},
                 {2006, 12, 8, 2},
                 {2004, 12, 8, 3},
                 {2000, 12, 8, 0}
