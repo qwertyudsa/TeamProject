@@ -10,7 +10,7 @@ public class FelineTests {
 
     @Test
     @DisplayName("Проверка, что КОШКИ по умолчанию имеют одного котенка")
-    @Description("Кошачьи имеют одного котенка")
+    @Description("Объект семейства Кошачьи имеет одного котенка")
     public void GetKittensTest(){
         Feline feline = new Feline();
         int expected = 1;
