@@ -16,15 +16,15 @@ public class BezrukihTests {
         assertEquals(0, BezrukihClass.add(-1, 1));
     }
     @Test
-    public void testAdd_NegativeNumbers() {
+    public void testAdd_NegativeNumber() {
         assertEquals(-5, BezrukihClass.add(-2, -3));
     }
     @Test
     public void testIsEvent() {
-        assertTrue(BezrukihClass.isEven(4));
-        assertFalse(BezrukihClass.isEven(3));
-        assertTrue(BezrukihClass.isEven(0));
-        assertFalse(BezrukihClass.isEven(-1));
+        assertTrue(BezrukihClass.isEvent(4));
+        assertFalse(BezrukihClass.isEvent(3));
+        assertTrue(BezrukihClass.isEvent(0));
+        assertFalse(BezrukihClass.isEvent(-1));
     }
     @Test
     public void testFactorial() {
