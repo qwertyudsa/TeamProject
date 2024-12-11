@@ -28,6 +28,6 @@ public class Meow {
     }
 
     public void miaow() {
-        System.out.println(felineType + " " + name + " мяукает... Миу");
+        System.out.println(felineType + " " + name + " мяукает... Мяу");
     }
 }
