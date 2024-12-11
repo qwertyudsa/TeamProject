@@ -1,18 +1,18 @@
 package allclasses.mihailov;
 
-public class beaver {
+public class Beaver {
     String name = "Бобр";
     int age = 7;
 
     public String PrintName(){
         String namePrint;
-        namePrint = ("Его имя" + name);
+        namePrint = ("Его имя " + name);
         return namePrint;
     }
 
     public String PrintAge(){
         String agePrint;
-        agePrint = ("Ему" + age );
+        agePrint = ("Ему " + age );
         return agePrint;
     }
 }

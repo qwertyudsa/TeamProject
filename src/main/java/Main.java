@@ -3,6 +3,7 @@ import allclasses.irinabig.Animal;
 import allclasses.irinabig.Cat;
 import allclasses.irinabig.Feline;
 import allclasses.irinabig.Lion;
+import allclasses.mihailov.Beaver;
 import allclasses.petrov.Programmer;
 import allclasses.yakimovich.YakimovichClass;
 
@@ -19,6 +20,7 @@ public class Main {
         showClassesPetrov();
         showClassesYakimovich();
         showClassesFokin();
+        showClassesMikhailov();
     }
     public static void showClassesIrinaBig() throws Exception {
         System.out.println("\nДемонстрация работы классов Ирины Георгиевны:\n");
@@ -76,5 +78,14 @@ public class Main {
             System.out.print(num + " ");
         }
         System.out.println(); // Переход на новую строку
+    }
+
+    public static void showClassesMikhailov(){
+        System.out.println("\nДемонстрация работы класса Михайлова Максима:\n");
+
+        Beaver beaver = new Beaver();
+
+        System.out.println(beaver.PrintName());
+        System.out.println(beaver.PrintAge());
     }
 }
