@@ -167,7 +167,7 @@ public class Main {
 
         // Демонстрация работы метода isEven
         int numberToCheck = 6;
-        boolean isEven = BezrukihClass.isEven(numberToCheck);
+        boolean isEven = BezrukihClass.isEvent(numberToCheck);
         System.out.println("Число " + numberToCheck + " четное? " + isEven);
 
         // Демонстрация работы метода factorial

@@ -20,7 +20,7 @@ public class BezrukihTests {
         assertEquals(-5, BezrukihClass.add(-2, -3));
     }
     @Test
-    public void testIsEven() {
+    public void testIsEvent() {
         assertTrue(BezrukihClass.isEven(4));
         assertFalse(BezrukihClass.isEven(3));
         assertTrue(BezrukihClass.isEven(0));

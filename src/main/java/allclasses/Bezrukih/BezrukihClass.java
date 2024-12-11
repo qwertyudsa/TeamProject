@@ -4,7 +4,7 @@ public class BezrukihClass {
     public static int add(int a, int b) {
         return a + b;
     }
-    public static boolean isEven(int number) {
+    public static boolean isEvent(int number) {
         return number % 2 == 0;
     }
     public static long factorial(int n) {
