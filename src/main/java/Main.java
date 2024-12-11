@@ -1,3 +1,4 @@
+import allclasses.Bezrukih.BezrukihClass;
 import allclasses.irinabig.*;
 import allclasses.petrov.Programmer;
 import allclasses.Baranov.Baranov;
@@ -159,7 +160,27 @@ public class Main {
     }
 
     public static void showClassesBezrukih() {
+
         System.out.println("\nДемонстрация работы класса Безруких Алексея:\n");
+        int sum = BezrukihClass.add(5, 10);
+        System.out.println("Сумма 5 и 10: " + sum);
+
+        // Демонстрация работы метода isEven
+        int numberToCheck = 6;
+        boolean isEven = BezrukihClass.isEven(numberToCheck);
+        System.out.println("Число " + numberToCheck + " четное? " + isEven);
+
+        // Демонстрация работы метода factorial
+        int factorialNumber = 5;
+        long factorialResult = BezrukihClass.factorial(factorialNumber);
+        System.out.println("Факториал числа " + factorialNumber + ": " + factorialResult);
+
+        // Пример вызова метода для отрицательного числа
+        try {
+            BezrukihClass.factorial(-5);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
     }
 
     public static void showClassesChernyshova() {
