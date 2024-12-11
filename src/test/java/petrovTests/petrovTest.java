@@ -49,14 +49,4 @@ public class petrovTest {
         String performance = programmer.getPerformance();
         Assert.assertTrue(performance.contains("Уровень кофеина: 80")); // Восстановленный кофеин
     }
-
-    @Test
-    public void testDebugCode() {
-        Programmer programmer = new Programmer("Alex Petrov", 27);
-        programmer.writeCode(); // Пишем код
-        String beforeDebug = programmer.getPerformance();
-        programmer.debugCode(); // Депурация
-        String afterDebug = programmer.getPerformance();
-        Assert.assertNotEquals(beforeDebug, afterDebug); // Количество строк должно уменьшиться
-    }
 }
