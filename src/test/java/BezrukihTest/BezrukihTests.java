@@ -28,18 +28,18 @@ public class BezrukihTests {
     }
     @Test
     public void testFactorial() {
-        assertEquals(1, BezrukihClass.factorial(0));
-        assertEquals(1, BezrukihClass.factorial(1));
-        assertEquals(2, BezrukihClass.factorial(2));
-        assertEquals(6, BezrukihClass.factorial(3));
-        assertEquals(24, BezrukihClass.factorial(4));
-        assertEquals(120, BezrukihClass.factorial(5));
+        assertEquals(1, BezrukihClass.factorials(0));
+        assertEquals(1, BezrukihClass.factorials(1));
+        assertEquals(2, BezrukihClass.factorials(2));
+        assertEquals(6, BezrukihClass.factorials(3));
+        assertEquals(24, BezrukihClass.factorials(4));
+        assertEquals(120, BezrukihClass.factorials(5));
     }
 
     @Test
     public void testFactorialNegativeNumber() {
         try {
-            BezrukihClass.factorial(-1);
+            BezrukihClass.factorials(-1);
         } catch (IllegalArgumentException e) {
             assertEquals("n must be non-negative", e.getMessage());
         }

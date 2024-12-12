@@ -170,11 +170,11 @@ public class Main {
         System.out.println("Число " + numberToCheck + " четное? " + isEven);
 
         int factorialNumber = 5;
-        long factorialResult = BezrukihClass.factorial(factorialNumber);
+        long factorialResult = BezrukihClass.factorials(factorialNumber);
         System.out.println("Факториал числа " + factorialNumber + ": " + factorialResult);
 
         try {
-            BezrukihClass.factorial(-5);
+            BezrukihClass.factorials(-5);
         } catch (IllegalArgumentException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }

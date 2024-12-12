@@ -7,7 +7,7 @@ public class BezrukihClass {
     public static boolean isEven(int number) {
         return number % 2 == 0;
     }
-    public static long factorial(int n) {
+    public static long factorials(int n) {
         if (n < 0) throw new IllegalArgumentException("n must be non-negative");
         if (n == 0) return 1;
         long result = 1;
