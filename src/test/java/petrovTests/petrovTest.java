@@ -4,7 +4,8 @@ import allclasses.petrov.Programmer;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class petrovTest {
+public class
+petrovTest {
 
     @Test
     public void testInitialValues() {
