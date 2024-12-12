@@ -166,7 +166,7 @@ public class Main {
         System.out.println("Сумма 5 и 10: " + sum);
 
         int numberToCheck = 6;
-        boolean isEven = BezrukihClass.isEvent(numberToCheck);
+        boolean isEven = BezrukihClass.isEven(numberToCheck);
         System.out.println("Число " + numberToCheck + " четное? " + isEven);
 
         int factorialNumber = 5;
