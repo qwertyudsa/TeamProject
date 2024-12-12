@@ -257,6 +257,7 @@ public class Main {
 
 
     public static void showClassesBaranov() {
+        System.out.println("\nДемонстрация работы класса Баранова Кирилла:\n");
         Baranov baranov = new Baranov();
 
         // Пример использования методов
@@ -268,6 +269,7 @@ public class Main {
     }
   
     public static void showClassesTovstogan() {
+        System.out.println("\nДемонстрация работы класса Товстогана Святослава:\n");
         Tovstogan T = new Tovstogan();
         Student S = new Student("Имя", "Фамилия", 222);
         // Пример использования методов

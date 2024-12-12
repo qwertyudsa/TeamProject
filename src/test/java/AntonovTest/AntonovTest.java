@@ -1,18 +1,21 @@
 package AntonovTest;
 
 import allclasses.antonov.Bear;
-import org.junit.jupiter.api.Test; // Используем JUnit 5
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertEquals;
 
 public class AntonovTest {
 
     @Test
     public void testInitialValues() {
         Bear bear = new Bear("Antonov", 0, 0);
-        assertEquals(null, bear.rank, "Начальный ранг должен быть Herald");
-        assertEquals(0, bear.pts, "Начальный уровень PTS должен быть 1");
-        assertEquals(0, bear.numberOfGames, "Начальное количество игр должно быть 0");
-        assertEquals(0, bear.hours, "Начальное количество часов должно быть 0");
+        assertEquals("Начальный ранг должен быть Herald",null, bear.rank);
+        assertEquals( "Начальный уровень PTS должен быть 1", 0, bear.pts);
+        assertEquals( "Начальное количество игр должно быть 0", 0, bear.numberOfGames);
+        assertEquals( "Начальное количество часов должно быть 0",0, bear.hours);
     }
 
 
@@ -22,7 +25,7 @@ public class AntonovTest {
         Bear bear = new Bear("Antonov", 0, 0);
         bear.pts = 100; // Задаём начальный уровень PTS
         bear.losePts();
-        assertTrue(bear.pts >= 50 || bear.pts == 0, "PTS после проигрыша должен уменьшиться, но не быть меньше 0");
+        assertTrue("PTS после проигрыша должен уменьшиться, но не быть меньше 0", bear.pts >= 50 || bear.pts == 0);
     }
 
     @Test
@@ -30,7 +33,7 @@ public class AntonovTest {
         Bear bear = new Bear("Antonov", 0, 0);
         bear.numberOfGames = 3; // Задаём количество игр
         bear.calculateHours();
-        assertEquals(2, bear.hours, "Количество часов должно быть 2 (3 игры × 40 / 60)");
+        assertEquals("Количество часов должно быть 2 (3 игры × 40 / 60)",2, bear.hours);
     }
 
     @Test
@@ -38,10 +41,10 @@ public class AntonovTest {
         Bear bear = new Bear("Antonov", 0, 0);
         bear.pts = 700; // Устанавливаем PTS в диапазон Guardian
         bear.yourRank();
-        assertEquals("Guardian", bear.rank, "Ранг должен быть Guardian при PTS 700");
+        assertEquals("Ранг должен быть Guardian при PTS 700","Guardian", bear.rank);
 
         bear.pts = 2200; // Устанавливаем PTS в диапазон Archon
         bear.yourRank();
-        assertEquals("Archon", bear.rank, "Ранг должен быть Archon при PTS 2200");
+        assertEquals("Ранг должен быть Archon при PTS 2200", "Archon", bear.rank);
     }
 }
