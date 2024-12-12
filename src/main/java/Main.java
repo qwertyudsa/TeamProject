@@ -1,4 +1,7 @@
 import allclasses.Bezrukih.BezrukihClass;
+import allclasses.shepelev.shep;
+import allclasses.tovstogan.Student;
+import allclasses.tovstogan.Tovstogan;
 import allclasses.irinabig.*;
 import allclasses.petrov.Programmer;
 import allclasses.Baranov.Baranov;
@@ -12,6 +15,7 @@ import allclasses.yakovleva.*;
 import allclasses.chernyshova.Mouse;
 import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
+import allclasses.gavrilov.Cats;
 import java.time.LocalDate;
 
 public class Main {
@@ -20,8 +24,8 @@ public class Main {
         // Демонстрация работы классов пакета irinabig
         try {
             showClassesIrinaBig();
-        }
-        catch (Exception e){
+            showClassesTovstogan();
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
 
@@ -39,6 +43,8 @@ public class Main {
         showClassesStrelnikov();
         showClassesSmirnova();
         showClassesZolina();
+        showClassesGavrilov();
+        showClassesShepelev();
 
     }
 
@@ -258,7 +264,20 @@ public class Main {
         boa.printCharacteristics(); // Вывод характеристик змеи
         boa.hiss();
     }
+
+    public static void showClassesGavrilov() {
+        System.out.println("\nДемонстрация работы класса Гаврилова Романа:\n");
+
+        Cats trueCat = new Cats("Борис");
+        Cats falseCat = new Cats("Феликс");
+
+        System.out.println(trueCat.CheckCat());
+        System.out.println(falseCat.CheckCat());
+    }
+
+
     public static void showClassesBaranov() {
+        System.out.println("\nДемонстрация работы класса Баранова Кирилла:\n");
         Baranov baranov = new Baranov();
 
         // Пример использования методов
@@ -268,6 +287,26 @@ public class Main {
         System.out.println("Сумма: " + sum);
         System.out.println("Произведение: " + product);
     }
-}
 
+    public static void showClassesTovstogan() {
+        System.out.println("\nДемонстрация работы класса Товстогана Святослава:\n");
+        Tovstogan T = new Tovstogan();
+        Student S = new Student("Имя", "Фамилия", 222);
+        // Пример использования методов
+        System.out.println(T.returnHello());
+        System.out.println(S.getGroup());
+    }
+
+    public static void showClassesShepelev() {
+        System.out.println("\nДемонстрация работы класса Шепелева Егора:\n");
+
+        shep trueDog = new shep("Макс");
+        shep falseDog = new shep("Гриша");
+
+        System.out.println(trueDog.CheckDog());
+        System.out.println(falseDog.CheckDog());
+    }
+
+
+}
 
