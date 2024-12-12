@@ -28,7 +28,7 @@ public class FokinTests {
         FokinClass fc = new FokinClass();
         assertEquals(5, fc.calculateSum(2, 3));
         methodForStepOne();
-        assertEquals(0, fc.calculateSum(1, 0));
+        assertEquals(0, fc.calculateSum(0, 0));
         methodForStepTwo();
         assertEquals(-1, fc.calculateSum(-1, 0));
         methodForStepThree();
