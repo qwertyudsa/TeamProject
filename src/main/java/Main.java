@@ -1,3 +1,4 @@
+import allclasses.buravlev.Pet;
 import allclasses.fokin.FokinClass;
 import allclasses.irinabig.Animal;
 import allclasses.irinabig.Cat;
@@ -5,6 +6,7 @@ import allclasses.irinabig.Feline;
 import allclasses.irinabig.Lion;
 import allclasses.petrov.Programmer;
 import allclasses.yakimovich.YakimovichClass;
+import allclasses.buravlev.Pet;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +23,7 @@ public class Main {
         showClassesFokin();
         showClassesVolodin();
         showClassesBezrukih();
+        showClassesBuravlev();
     }
     public static void showClassesIrinaBig() throws Exception {
         System.out.println("\nДемонстрация работы классов Ирины Георгиевны:\n");
@@ -85,5 +88,11 @@ public class Main {
     }
     public static void showClassesBezrukih() {
         System.out.println("\nДемонстрация работы класса Безруких Алексея:\n");
+    }
+    public static void showClassesBuravlev(){
+        System.out.println("\n Демонстрация работы класса Буравлева Максима\n");
+        Pet cat = new Pet("Крошик", 10, "Кот", 9 );
+        System.out.println(cat.getInfo());
+        System.out.println(cat.isAdult());
     }
 }
