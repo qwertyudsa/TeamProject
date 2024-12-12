@@ -80,7 +80,6 @@ public class Mouse {
         System.out.println("Возраст в днях: " + getAgeInDays());
     }
 
-    // Пример использования
     public static void main(String[] args) {
         Mouse defaultMouse = new Mouse();
         defaultMouse.describeMouse();
