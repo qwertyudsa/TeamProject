@@ -1,10 +1,9 @@
 package BezrukihTest;
 
 import allclasses.Bezrukih.BezrukihClass; // Ensure correct import
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class BezrukihTests {
     @Test
