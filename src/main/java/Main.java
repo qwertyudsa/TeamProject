@@ -241,7 +241,7 @@ public class Main {
         boa.printCharacteristics(); // Вывод характеристик змеи
         boa.hiss();
     }
-    private static void showClassesUrzhumova() {
+    public static void showClassesUrzhumova() {
         System.out.println("\nДемонстрация работы классов Уржумовой Яны:\n");
         Whale whale = new Whale();
         System.out.println(whale.getSound());
