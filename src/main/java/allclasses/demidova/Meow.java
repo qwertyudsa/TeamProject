@@ -27,7 +27,7 @@ public class Meow {
         System.out.println("Имя: " + name);
     }
 
-    public void miaow() {
-        System.out.println(felineType + " " + name + " мяукает... Миу");
+    public String miaow() {
+        return felineType + " " + name + " мяукает... Миу";
     }
 }

@@ -14,6 +14,7 @@ import allclasses.chernyshova.Mouse;
 import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
+import allclasses.demidova.Meow;
 import java.time.LocalDate;
 
 public class Main {
@@ -42,6 +43,7 @@ public class Main {
         showClassesSmirnova();
         showClassesZolina();
         showClassesGavrilov();
+        showClassesDemidova();
     }
 
     public static void showClassesIrinaBig() throws Exception {
@@ -65,6 +67,13 @@ public class Main {
         programmer.writeCode();
         programmer.drinkCoffee();
         programmer.debugCode();
+    }
+
+    public  static void showClassesDemidova() {
+        System.out.println("\nДемонстрация работы классов Демидовой Светланы:");
+        Meow meow = new Meow("леопард", "Лео");
+        meow.printInfo();
+        System.out.println(meow.miaow());
     }
 
     public static void showClassesYakimovich() {
