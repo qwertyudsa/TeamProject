@@ -16,6 +16,7 @@ import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
 import allclasses.saprykin.SaprykinClass;
+import allclasses.andriyanov.LongEaredJerboa;
 import java.time.LocalDate;
 
 public class Main {
@@ -45,7 +46,7 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
-
+        showClassesAndriyanov();
     }
 
     public static void showClassesIrinaBig() throws Exception {
@@ -69,6 +70,15 @@ public class Main {
         programmer.writeCode();
         programmer.drinkCoffee();
         programmer.debugCode();
+    }
+
+    public static void showClassesAndriyanov() {
+        LongEaredJerboa jerboa = new LongEaredJerboa("Andriyanov", 100);
+        jerboa.attemptLift(90);
+        jerboa.attemptLift(110);
+        jerboa.attemptLift(100);
+        jerboa.increaseMaxWeight();
+        jerboa.showStatistics();
     }
 
     public static void showClassesYakimovich() {
