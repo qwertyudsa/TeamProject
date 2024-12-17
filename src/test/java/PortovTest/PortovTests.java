@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class PortovTests
 {
     @Test
+    //@DisplayName("Проверка, что у нас правильный вывод приветствия")
     public void testIntroduce() {
         // Создаём объект Person
         Person person = new Person("Алексей", 25);
@@ -18,6 +19,7 @@ public class PortovTests
     }
 
     @Test
+    //@DisplayName("Проверка, что у нас корректно изменился возраст")
     public void testHaveBirthday() {
         Person person = new Person("Алексей", 25);
 
@@ -28,6 +30,7 @@ public class PortovTests
     }
 
     @Test
+    //@DisplayName("Проверка, что у нас правильный вывод приветствия")
     public void testMultipleBirthdays() {
         Person person = new Person("Алексей", 25);
 
