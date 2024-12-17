@@ -3,13 +3,16 @@ package smirnovaTest;
 import allclasses.smirnova.Seal;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+
 public class SealTest {
 
     @Test
+    @DisplayName("Проверка класса по умолчанию")
     public void testSealDefaultConstructor() {
         Seal seal = new Seal();
         Assert.assertEquals("Крошик", getFieldValue(seal, "name"));
