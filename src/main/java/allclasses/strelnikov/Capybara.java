@@ -1,5 +1,6 @@
 package allclasses.strelnikov;
 
+
 public class Capybara {
     // Поля класса
     private String name;
