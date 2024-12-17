@@ -1,15 +1,26 @@
 package AntonovTest;
 
 import allclasses.antonov.Bear;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Step;
+import io.qameta.allure.TmsLink;
+import org.junit.Test;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Description;
 //import static org.junit.Assert.assertEquals;
 
 public class AntonovTest {
 
     @Test
+    @DisplayName("Проверка вывода данных новичка в игре ")
+    @Description("Описание теста")
+    @TmsLink("TestCase - 112")
+    @Issue ("BUG-985")
     public void testInitialValues() {
         Bear bear = new Bear("Antonov", 0, 0);
         assertEquals("Начальный ранг должен быть Herald",null, bear.rank);
@@ -23,9 +34,14 @@ public class AntonovTest {
     @Test
     public void testLosePts() {
         Bear bear = new Bear("Antonov", 0, 0);
-        bear.pts = 100; // Задаём начальный уровень PTS
-        bear.losePts();
+        bear.pts = 100;
+        bear.losePts();// Задаём начальный уровень PTS
+        methodForStepOne();
         assertTrue("PTS после проигрыша должен уменьшиться, но не быть меньше 0", bear.pts >= 50 || bear.pts == 0);
+    }
+    @Step("Шаг 1")
+    public void methodForStepOne(){
+        System.out.println("Вызов метода 1");
     }
 
     @Test
