@@ -35,7 +35,7 @@ public class Meow {
         return felineType + " " + name + " идёт...\n" + step(countSteps);
     }
 
-    public String step(int countSteps){
+    private String step(int countSteps){
         StringBuilder d= new StringBuilder();
         for(int i=0;i<countSteps;i++){
             d.append("Шаг ").append(i+1).append("\n");

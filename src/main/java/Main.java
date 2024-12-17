@@ -71,9 +71,15 @@ public class Main {
 
     public  static void showClassesDemidova() {
         System.out.println("\nДемонстрация работы классов Демидовой Светланы:");
-        Meow meow = new Meow("леопард", "Лео");
-        meow.printInfo();
-        System.out.println(meow.miaow());
+        Meow leo = new Meow("леопард", "Лео");
+        leo.printInfo();
+        System.out.println(leo.miaow());
+
+        Meow tiger = new Meow("тигр", "Тигруля");
+        tiger.printInfo();
+        System.out.println(tiger.stepMeow(7));
+        System.out.println(tiger.miaow());
+        System.out.println(leo.stepMeow(3));
     }
 
     public static void showClassesYakimovich() {

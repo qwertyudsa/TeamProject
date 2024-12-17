@@ -39,8 +39,8 @@ public class MeowTest {
     }
 
     @Test
-    @DisplayName("Проверка, что кошачий идёт")
-    @Description("Метод stepMeow работает корректно и выводит шаги")
+    @DisplayName("Проверка, что кошачий идёт")  // Имя
+    @Description("Метод stepMeow работает корректно и выводит шаги")  // Описание
     @TmsLink("TestCase-4")  // ссылка на тест кейс
     @Issue("BUG-983")  // ссылка на баг-репорт
     public void testStepMeow() {
@@ -48,7 +48,7 @@ public class MeowTest {
         verifyStepMeow(panther, 3, "пантера Барти идёт...\nШаг 1\nШаг 2\nШаг 3\n");
     }
 
-    @Step("Проверяем метод stepMeow с {steps} шагами")
+    @Step("Проверяем метод stepMeow с {steps} шагами")  // Шаг
     public void verifyStepMeow(Meow feline, int steps, String expectedOutput) {
         String actualOutput = stepMeowOutput(feline, steps);
         Assert.assertEquals("Вывод метода stepMeow не совпадает с ожидаемым", expectedOutput, actualOutput);
