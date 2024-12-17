@@ -3,16 +3,16 @@ package smirnovaTest;
 import allclasses.smirnova.Seal;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import io.qameta.allure.junit4.DisplayName;
 
 
 public class SealTest {
 
     @Test
-    @DisplayName("Проверка класса по умолчанию")
+    @DisplayName("Проверка стандартного заполнения класса")
     public void testSealDefaultConstructor() {
         Seal seal = new Seal();
         Assert.assertEquals("Крошик", getFieldValue(seal, "name"));
@@ -22,6 +22,7 @@ public class SealTest {
     }
 
     @Test
+    @DisplayName("Проверка параметризованного конструктора")
     public void testSealParameterizedConstructor() {
         Seal seal = new Seal("Ластик", 5, 2, 20.0);
         Assert.assertEquals("Ластик", getFieldValue(seal, "name"));
@@ -29,7 +30,9 @@ public class SealTest {
         Assert.assertEquals(1, getFieldValue(seal, "daily_naps")); // Default value for daily_naps
         Assert.assertEquals(20.0, (double) getFieldValue(seal, "weight"), 0.01);
     }
+
     @Test
+    @DisplayName("Проверка поведения метода triks() при нулевом возрасте")
     public void testTriksWithAgeZero() {
         Seal seal = new Seal("Крошик", 0, 1, 10.0);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -42,6 +45,7 @@ public class SealTest {
     }
 
     @Test
+    @DisplayName("Проверка поведения метода triks() при положительном возрасте")
     public void testTriksWithPositiveAge() {
         Seal seal = new Seal("Крошик", 3, 1, 15.0);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
