@@ -1,3 +1,4 @@
+import allclasses.Volodin.VolodinClasses;
 import allclasses.fokin.FokinClass;
 import allclasses.irinabig.Animal;
 import allclasses.irinabig.Cat;
@@ -80,7 +81,23 @@ public class Main {
     }
     public static void showClassesVolodin() {
         System.out.println("\nДемонстрация работы класса Володина Андрея:\n");
+        VolodinClasses volodinClasses = new VolodinClasses();
 
+        int difference = volodinClasses.subtract(3, 2);
+        System.out.println("Разность 3 и 2: " + difference);
 
+        int multiply = volodinClasses.multiply(5, 7);
+        System.out.println("Произведение 5 и 7: " + multiply);
+
+        int num = 4;
+        boolean isPositive = volodinClasses.isPositive(num);
+        if (isPositive)
+        {
+            System.out.println(num + " - положительное число");
+        }
+        else
+        {
+            System.out.println(num + " - отрицательное число");
+        }
     }
 }
