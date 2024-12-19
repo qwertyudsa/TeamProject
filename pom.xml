@@ -18,7 +18,7 @@
         <!-- версия Aspectj -->
         <aspectj.version>1.9.7</aspectj.version>
         <!-- версия Allure -->
-        <allure.version>2.32.0</allure.version>
+        <allure.version>2.20.0</allure.version>
     </properties>
 
     <dependencies>
@@ -81,7 +81,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.32.0</version>
+                <version>2.10.0</version>
                 <configuration>
                     <reportVersion>2.15.0</reportVersion>
                 </configuration>
