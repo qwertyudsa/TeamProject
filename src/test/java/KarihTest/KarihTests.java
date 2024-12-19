@@ -6,7 +6,8 @@ import io.qameta.allure.Step;
 import io.qameta.allure.TmsLink;
 import org.junit.Assert;
 import org.junit.Test;
-import io.qameta.allure.junit4.DisplayName;
+import org.junit.jupiter.api.DisplayName;
+
 public class KarihTests {
     @Test
     @DisplayName("Проверка, что кошка мяукнет 3 раза")
