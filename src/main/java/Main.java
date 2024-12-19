@@ -178,7 +178,6 @@ public class Main {
         int factorialNumber = 5;
         long factorialResult = BezrukihClass.factorials(factorialNumber);
         System.out.println("Факториал числа " + factorialNumber + ": " + factorialResult);
-
         try {
             BezrukihClass.factorials(-5);
         } catch (IllegalArgumentException e) {
