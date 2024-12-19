@@ -18,7 +18,7 @@
         <!-- версия Aspectj -->
         <aspectj.version>1.9.7</aspectj.version>
         <!-- версия Allure -->
-        <allure.version>2.20.0</allure.version>
+        <allure.version>2.32.0</allure.version>
     </properties>
 
     <dependencies>
