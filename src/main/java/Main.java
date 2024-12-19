@@ -98,9 +98,14 @@ public class Main {
         System.out.println("Создан объект пользовательской мыши:");
         customMouse.describeMouse();
 
+        // Проверяем возраст в днях
+        System.out.println("\nВозраст пользовательской мыши в днях: " + customMouse.getAgeInDays());
+
         // Проверка с неверной датой рождения
         System.out.println("\nПопытка установить будущую дату рождения:");
         customMouse.setBirthDate(LocalDate.now().plusDays(1));
         System.out.println("Дата рождения после проверки: " + customMouse.getBirthDate());
     }
+
+
 }
