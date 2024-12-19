@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.TmsLink;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
+import io.qameta.allure.junit4.DisplayName;
 
 public class KarihTests {
     @Test
