@@ -1,40 +1,51 @@
-import allclasses.irinabig.Animal;
-import allclasses.irinabig.Cat;
-import allclasses.irinabig.Feline;
-import allclasses.irinabig.Lion;
+import allclasses.shepelev.shep;
+import allclasses.tovstogan.Student;
+import allclasses.tovstogan.Tovstogan;
+import allclasses.irinabig.*;
 import allclasses.petrov.Programmer;
+import allclasses.Baranov.Baranov;
+import allclasses.smirnova.Seal;
 import allclasses.stebunov.Wolf;
-
 import allclasses.strelnikov.Capybara;
-
 import allclasses.fokin.FokinClass;
-
 import allclasses.yakimovich.YakimovichClass;
+import allclasses.antonov.Bear;
 import allclasses.yakovleva.*;
 import allclasses.chernyshova.Mouse;
+import allclasses.ravilova.RavilovaClass;
+import allclasses.zolina.Snake;
+import allclasses.gavrilov.Cats;
+import allclasses.saprykin.SaprykinClass;
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-
         // Демонстрация работы классов пакета irinabig
         try {
             showClassesIrinaBig();
-        }
-        catch (Exception e){
+            showClassesTovstogan();
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
 
         showClassesPetrov();
+        showClassesBaranov();
         showClassesStebunov();
         showClassesFokin();
         showClassesYakimovich();
+        showClassesAntonov();
         showClassesYakovleva();
         showClassesVolodin();
         showClassesBezrukih();
         showClassesChernyshova();
+        showClassesRavilova();
         showClassesStrelnikov();
+        showClassesSmirnova();
+        showClassesZolina();
+        showClassesGavrilov();
+        showClassesShepelev();
+
     }
 
     public static void showClassesIrinaBig() throws Exception {
@@ -96,6 +107,17 @@ public class Main {
         System.out.println(); // Переход на новую строку
     }
 
+    public  static void showClassesAntonov() {
+        Bear bear = new Bear("Antonov", 10, 2000);
+        bear.yourRank();
+        bear.playGame(); // Сыграли 1 игру
+        bear.playGame(); // Сыграли еще 1 игру
+        bear.playGame();
+        bear.losePts();
+        bear.whoAreYou();
+    }
+
+
     public static void showClassesStebunov() {
         System.out.println("\nДемонстрация работы класса Стебунова Никиты:");
 
@@ -119,13 +141,13 @@ public class Main {
 
         // Демонстрация метода howl
         System.out.println("\nДемонстрация метода - Волк воет:");
-        defaultWolf.howl();
-        customWolf.howl();
+        System.out.println(defaultWolf.howl());
+        System.out.println(customWolf.howl());
     }
 
     public static void showClassesYakovleva() {
         System.out.println("\nДемонстрация работы класса Яковлевой Анны:");
-        
+
         // Создание оленя с помощью конструктора по умолчанию
         Deer deer = new Deer("Lin", LocalDate.of(2020, 11, 3), Type.благородный);
         deer.Info();
@@ -145,6 +167,7 @@ public class Main {
 
     public static void showClassesBezrukih() {
         System.out.println("\nДемонстрация работы класса Безруких Алексея:\n");
+
     }
 
     public static void showClassesChernyshova() {
@@ -163,8 +186,31 @@ public class Main {
         customMouse.setBirthDate(LocalDate.now().plusDays(1));
         System.out.println("Дата рождения после проверки: " + customMouse.getBirthDate());
     }
+    public static void showClassesRavilova() {
+        System.out.println("\nДемонстрация работы класса Равиловой:\n");
+        RavilovaClass ravilovaClass = new RavilovaClass();
+
+        // Демонстрация метода addNumbers
+        System.out.println("Сложение 7 + 5 = " + ravilovaClass.addNumbers(7, 5));
+
+        // Демонстрация метода countWords
+        String sentence = "Сегодня вторник, завтра среда";
+        System.out.println("Количество слов в строке \"" + sentence + "\" = " + ravilovaClass.countWords(sentence));
+
+        // Демонстрация метода findMax
+        int[] numbers = {2, 8, 1, 15, 6};
+        System.out.println("Максимальное число в массиве {2, 8, 1, 15, 6} = " + ravilovaClass.findMax(numbers));
+
+        // Демонстрация обработки исключения для findMax
+        try {
+            System.out.println("Максимальное число в пустом массиве: " + ravilovaClass.findMax(new int[]{}));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+    }
 
     public static void showClassesStrelnikov(){
+        System.out.println("\nДемонстрация работы классов Стрельникова Максима:\n");
         // Создаём объект капибары
         Capybara capy = new Capybara("Каппи", 3, 35.5);
         // Тестируем методы
@@ -176,4 +222,104 @@ public class Main {
         capy.growOlder();          // Капибара стареет
         capy.displayInfo();        // Ещё раз печатаем информацию
     }
+<<<<<<< HEAD
 }
+=======
+
+    public static void showClassesSmirnova(){
+        System.out.println("\nДемонстрация работы классов Смирновой Ирины:\n");
+        Seal defaultSeal = new Seal();
+        defaultSeal.triks();
+
+        Seal customSeal = new Seal("Петя", 5, 24, 100);
+        customSeal.triks();
+    }
+    public static void showClassesZolina(){
+        System.out.println("\nДемонстрация работы классов Золиной Виктории:\n");
+        // Создаем три змеи
+        Snake cobra = new Snake("Кобра", 5, 300, 2);
+        Snake python = new Snake("Питон", 3, 250, 5);
+        Snake boa = new Snake("Удав", 6, 400, 3);
+
+        // Каждая змея шипит
+        cobra.printCharacteristics(); // Вывод характеристик змеи
+        cobra.hiss();
+
+        python.printCharacteristics(); // Вывод характеристик змеи
+        python.hiss();
+
+        boa.printCharacteristics(); // Вывод характеристик змеи
+        boa.hiss();
+    }
+
+    public static void showClassesGavrilov() {
+        System.out.println("\nДемонстрация работы класса Гаврилова Романа:\n");
+
+        Cats trueCat = new Cats("Борис");
+        Cats falseCat = new Cats("Феликс");
+
+        System.out.println(trueCat.CheckCat());
+        System.out.println(falseCat.CheckCat());
+    }
+
+
+    public static void showClassesBaranov() {
+        System.out.println("\nДемонстрация работы класса Баранова Кирилла:\n");
+        Baranov baranov = new Baranov();
+
+        // Пример использования методов
+        int sum = baranov.add(5, 3);
+        int product = baranov.multiply(5, 3);
+
+        System.out.println("Сумма: " + sum);
+        System.out.println("Произведение: " + product);
+    }
+  
+    public static void showClassesTovstogan() {
+        System.out.println("\nДемонстрация работы класса Товстогана Святослава:\n");
+        Tovstogan T = new Tovstogan();
+        Student S = new Student("Имя", "Фамилия", 222);
+        // Пример использования методов
+        System.out.println(T.returnHello());
+        System.out.println(S.getGroup());
+    }
+
+    public static void showClassesShepelev() {
+        System.out.println("\nДемонстрация работы класса Шепелева Егора:\n");
+
+        shep trueDog = new shep("Макс");
+        shep falseDog = new shep("Гриша");
+
+        System.out.println(trueDog.CheckDog());
+        System.out.println(falseDog.CheckDog());
+    }
+	
+	public static void showClassesSaprykin() {
+        System.out.println("\nДемонстрация работы класса Сапрыкина Семёна:");
+
+        // Создаем объект класса SaprykinClass
+        SaprykinClass student = new SaprykinClass("Семён Сапрыкин", 20, 4.7);
+
+        // Выводим информацию о студенте
+        System.out.println(student.getStudentInfo());
+
+        // Проверяем, является ли студент отличником
+        if (student.isExcellentStudent()) {
+            System.out.println(student.getName() + " - отличник.");
+        } else {
+            System.out.println(student.getName() + " - не отличник.");
+        }
+
+        // Изменяем средний балл студента
+        student.setAverageGrade(4.2);
+        System.out.println("Обновленный средний балл: " + student.getAverageGrade());
+
+        // Снова проверяем, является ли студент отличником
+        if (student.isExcellentStudent()) {
+            System.out.println(student.getName() + " - отличник.");
+        } else {
+            System.out.println(student.getName() + " - не отличник.");
+        }
+    }
+}
+>>>>>>> 63a35180cd946b3a4dcf4a721ee533fd27ff7815
