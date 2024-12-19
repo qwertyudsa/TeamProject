@@ -1,4 +1,4 @@
-package BalabanovaTest;
+package BalabanovaTest;//
 import allclasses.balabanova.Plant;
 import io.qameta.allure.Description;
 import io.qameta.allure.Issue;
