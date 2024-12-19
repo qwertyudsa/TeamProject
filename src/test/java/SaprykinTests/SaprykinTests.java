@@ -63,6 +63,57 @@ public class SaprykinTests {
         verifyIsExcellentStudent(student, false);
     }
 
+    @Test
+    @DisplayName("Проверка отрицательного среднего балла")
+    @Description("Тест проверяет, что установка отрицательного среднего балла вызывает исключение.")
+    public void testNegativeAverageGrade() {
+        SaprykinClass student = createStudent("Мария Смирнова", 22, 3.0);
+        Assert.assertThrows(IllegalArgumentException.class, () -> updateAverageGrade(student, -1.0));
+    }
+
+    @Test
+    @DisplayName("Проверка обновления имени студента")
+    @Description("Тест проверяет, что метод setName корректно обновляет имя студента.")
+    public void testUpdateStudentName() {
+        SaprykinClass student = createStudent("Олег Иванов", 20, 3.8);
+        updateStudentName(student, "Олег Петров");
+        verifyStudentName(student, "Олег Петров");
+    }
+
+    @Test
+    @DisplayName("Проверка изменения возраста студента")
+    @Description("Тест проверяет, что метод setAge корректно обновляет возраст студента.")
+    public void testUpdateStudentAge() {
+        SaprykinClass student = createStudent("Елена Орлова", 19, 4.5);
+        updateStudentAge(student, 21);
+        verifyStudentAge(student, 21);
+    }
+
+    @Test
+    @DisplayName("Проверка максимального возраста студента")
+    @Description("Тест проверяет, что установка возраста больше 100 вызывает исключение.")
+    public void testMaxStudentAge() {
+        SaprykinClass student = createStudent("Александр Сидоров", 20, 3.0);
+        Assert.assertThrows(IllegalArgumentException.class, () -> updateStudentAge(student, 101));
+    }
+
+    @Test
+    @DisplayName("Проверка минимального возраста студента")
+    @Description("Тест проверяет, что установка возраста меньше 16 вызывает исключение.")
+    public void testMinStudentAge() {
+        SaprykinClass student = createStudent("Василий Кузнецов", 18, 4.0);
+        Assert.assertThrows(IllegalArgumentException.class, () -> updateStudentAge(student, 15));
+    }
+
+    @Test
+    @DisplayName("Проверка корректности метода equals")
+    @Description("Тест проверяет, что метод equals корректно сравнивает два одинаковых объекта.")
+    public void testEqualsMethod() {
+        SaprykinClass student1 = createStudent("Юлия Романова", 20, 4.3);
+        SaprykinClass student2 = createStudent("Юлия Романова", 20, 4.3);
+        Assert.assertEquals(student1, student2);
+    }
+
     @Step("Создание студента: имя={name}, возраст={age}, средний балл={averageGrade}")
     private SaprykinClass createStudent(String name, int age, double averageGrade) {
         return new SaprykinClass(name, age, averageGrade);
@@ -86,5 +137,25 @@ public class SaprykinTests {
     @Step("Проверка среднего балла студента: ожидается {expectedGrade}")
     private void verifyAverageGrade(SaprykinClass student, double expectedGrade) {
         Assert.assertEquals(expectedGrade, student.getAverageGrade(), 0.01);
+    }
+
+    @Step("Обновление имени студента на {newName}")
+    private void updateStudentName(SaprykinClass student, String newName) {
+        student.setName(newName);
+    }
+
+    @Step("Проверка имени студента: ожидается {expectedName}")
+    private void verifyStudentName(SaprykinClass student, String expectedName) {
+        Assert.assertEquals(expectedName, student.getName());
+    }
+
+    @Step("Обновление возраста студента на {newAge}")
+    private void updateStudentAge(SaprykinClass student, int newAge) {
+        student.setAge(newAge);
+    }
+
+    @Step("Проверка возраста студента: ожидается {expectedAge}")
+    private void verifyStudentAge(SaprykinClass student, int expectedAge) {
+        Assert.assertEquals(expectedAge, student.getAge());
     }
 }
