@@ -15,6 +15,7 @@ import allclasses.chernyshova.Mouse;
 import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
+import allclasses.saprykin.SaprykinClass;
 import java.time.LocalDate;
 
 public class Main {
@@ -289,7 +290,32 @@ public class Main {
         System.out.println(trueDog.CheckDog());
         System.out.println(falseDog.CheckDog());
     }
+	
+	public static void showClassesSaprykin() {
+        System.out.println("\nДемонстрация работы класса Сапрыкина Семёна:");
 
+        // Создаем объект класса SaprykinClass
+        SaprykinClass student = new SaprykinClass("Семён Сапрыкин", 20, 4.7);
 
+        // Выводим информацию о студенте
+        System.out.println(student.getStudentInfo());
+
+        // Проверяем, является ли студент отличником
+        if (student.isExcellentStudent()) {
+            System.out.println(student.getName() + " - отличник.");
+        } else {
+            System.out.println(student.getName() + " - не отличник.");
+        }
+
+        // Изменяем средний балл студента
+        student.setAverageGrade(4.2);
+        System.out.println("Обновленный средний балл: " + student.getAverageGrade());
+
+        // Снова проверяем, является ли студент отличником
+        if (student.isExcellentStudent()) {
+            System.out.println(student.getName() + " - отличник.");
+        } else {
+            System.out.println(student.getName() + " - не отличник.");
+        }
+    }
 }
-
