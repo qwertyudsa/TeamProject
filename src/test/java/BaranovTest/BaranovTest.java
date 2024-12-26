@@ -2,6 +2,8 @@ package BaranovTest;
 
 import allclasses.Baranov.Baranov;
 import org.junit.Test;
+import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Description;
 import static org.junit.Assert.*;
 
 public class BaranovTest {
@@ -33,6 +35,8 @@ public class BaranovTest {
     }
 
     @Test
+    @DisplayName("Тестирование на отрицательные числа")
+    @Description("Тест прошёл успешно")
     public void testMultiplyNegativeNumbers() {
         Baranov baranov = new Baranov();
         assertEquals(15, baranov.multiply(-5, -3));
