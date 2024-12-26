@@ -17,6 +17,7 @@ import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
 import allclasses.saprykin.SaprykinClass;
 import java.time.LocalDate;
+import allclasses.petukhova.kittens;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +46,7 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
+	showClassesPetunova();
 
     }
 
@@ -290,8 +292,7 @@ public class Main {
         System.out.println(trueDog.CheckDog());
         System.out.println(falseDog.CheckDog());
     }
-	
-	public static void showClassesSaprykin() {
+    public static void showClassesSaprykin() {
         System.out.println("\nДемонстрация работы класса Сапрыкина Семёна:");
 
         // Создаем объект класса SaprykinClass
@@ -316,6 +317,14 @@ public class Main {
             System.out.println(student.getName() + " - отличник.");
         } else {
             System.out.println(student.getName() + " - не отличник.");
-        }
+    	}
+    }
+	
+    public static void showClassesPetuhova(){
+	kittens kitten = new kittens();
+	kitten.catMom = "newMom!";
+	kitten.catMom = "newMom!";
+	kitten.kitten = "milimini";
+	kitten.PrintInfo();
     }
 }
